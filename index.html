@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yh chen — Cloud Architect / Solution Architect / SRE / DevOps</title>
+<meta name="description" content="7-year cross-cloud SRE / DevOps engineer. AWS + GCP + on-prem. SOC 2 / ISO 27001. AI-powered SRE tooling.">
+<meta property="og:title" content="yh chen — Resume">
+<meta property="og:description" content="Cloud Architect / Solution Architect / SRE / DevOps · 7 yrs cross-cloud">
+<meta property="og:type" content="profile">
+<style>
+:root {
+    --slate-900: #0f172a;
+    --slate-800: #1f2937;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-300: #cbd5e1;
+    --slate-200: #e2e8f0;
+    --slate-100: #f1f5f9;
+    --slate-50:  #f8fafc;
+    --blue-500: #3b82f6;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --amber-50: #fffbeb;
+    --amber-400: #fbbf24;
+    --amber-800: #92400e;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+                 'Helvetica Neue', 'Segoe UI', 'PingFang TC',
+                 'Microsoft JhengHei', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--slate-800);
+    background: var(--slate-50);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 56px 64px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05),
+                0 12px 32px rgba(15, 23, 42, 0.06);
+    min-height: 100vh;
+}
+
+/* === Top action bar === */
+.actions {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--slate-200);
+    padding: 12px 56px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    z-index: 10;
+}
+.actions a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--slate-600);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--slate-200);
+    transition: all 0.15s ease;
+}
+.actions a:hover {
+    color: var(--blue-700);
+    border-color: var(--blue-500);
+    background: var(--slate-50);
+}
+.actions a.primary {
+    background: var(--blue-700);
+    color: #ffffff;
+    border-color: var(--blue-700);
+}
+.actions a.primary:hover {
+    background: var(--blue-900);
+    border-color: var(--blue-900);
+}
+
+/* === Profile photo === */
+.profile-photo {
+    float: right;
+    width: 130px;
+    height: auto;
+    border-radius: 8px;
+    margin: 4px 0 16px 28px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.10),
+                0 4px 12px rgba(15, 23, 42, 0.08);
+    object-fit: cover;
+}
+
+/* === H1 / Name === */
+h1 {
+    font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue',
+                 'PingFang TC', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin: 0 0 4px 0;
+    letter-spacing: -0.8px;
+}
+h1 + p {
+    font-size: 17px;
+    color: var(--slate-600);
+    margin: 0 0 12px 0;
+    font-weight: 500;
+}
+h1 + p + p {
+    font-size: 14px;
+    color: var(--slate-500);
+    margin: 0 0 8px 0;
+    line-height: 1.7;
+}
+
+/* === H2 / Section heading === */
+h2 {
+    font-family: -apple-system, 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--slate-900);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 36px 0 14px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--blue-500);
+}
+
+/* === H3 / Role / Company === */
+h3 {
+    font-family: -apple-system, 'SF Pro Display', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--slate-900);
+    margin: 24px 0 2px 0;
+}
+h3 + p {
+    margin: 0 0 8px 0;
+    font-size: 13.5px;
+    color: var(--slate-500);
+}
+h3 + p em {
+    font-style: italic;
+}
+
+/* === H4 / Project sub-section === */
+h4 {
+    font-family: -apple-system, 'SF Pro Display', sans-serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--blue-900);
+    margin: 18px 0 4px 0;
+}
+h4 em {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--slate-500);
+}
+
+/* === Body === */
+p {
+    margin: 6px 0;
+    line-height: 1.65;
+}
+p strong {
+    color: var(--blue-900);
+    font-weight: 600;
+}
+
+/* === Bullet lists === */
+ul {
+    margin: 4px 0 12px 0;
+    padding-left: 22px;
+    list-style: none;
+}
+ul li {
+    position: relative;
+    margin: 4px 0;
+    padding-left: 10px;
+    line-height: 1.6;
+}
+ul li::before {
+    content: "•";
+    color: var(--blue-500);
+    font-weight: 700;
+    position: absolute;
+    left: -4px;
+    top: 0;
+}
+
+/* === Tables (Skills) === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 16px 0;
+    font-size: 14px;
+}
+th, td {
+    padding: 8px 12px 8px 0;
+    text-align: left;
+    vertical-align: top;
+    border: none;
+    line-height: 1.55;
+}
+th {
+    color: var(--slate-600);
+    font-weight: 600;
+    border-bottom: 1px solid var(--slate-300);
+    padding-bottom: 8px;
+}
+td:first-child, th:first-child {
+    width: 23%;
+    color: var(--blue-900);
+    font-weight: 600;
+    padding-right: 16px;
+    white-space: nowrap;
+}
+tr:not(:last-child) td {
+    border-bottom: 1px solid var(--slate-100);
+}
+
+/* === HR === */
+hr {
+    border: 0;
+    border-top: 1px solid var(--slate-200);
+    margin: 16px 0;
+}
+
+/* === Strong === */
+strong {
+    color: var(--slate-900);
+    font-weight: 600;
+}
+
+/* === Code === */
+code {
+    font-family: 'SF Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-size: 13px;
+    background: var(--slate-100);
+    color: var(--slate-900);
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+/* === Links === */
+a {
+    color: var(--blue-700);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+}
+a:hover {
+    border-bottom-color: var(--blue-500);
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--slate-200);
+    font-size: 13px;
+    color: var(--slate-500);
+}
+
+/* === Responsive === */
+@media (max-width: 720px) {
+    main { padding: 32px 24px 48px; box-shadow: none; }
+    .actions { padding: 10px 20px; }
+    h1 { font-size: 30px; }
+    h1 + p { font-size: 15px; }
+    h2 { font-size: 14px; }
+    .profile-photo {
+        float: none;
+        display: block;
+        width: 110px;
+        margin: 0 auto 16px;
+    }
+    table, thead, tbody, tr, th, td { display: block; }
+    th { display: none; }
+    td:first-child {
+        width: auto !important;
+        white-space: normal;
+        padding-top: 12px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    tr { border-bottom: 1px solid var(--slate-200); padding: 8px 0; }
+}
+
+/* === Print: hide actions === */
+@media print {
+    body { background: #ffffff; }
+    main { box-shadow: none; max-width: none; padding: 24px; }
+    .actions, footer { display: none; }
+}
+</style>
+</head>
+<body>
+<main>
+<p><img src="profile.jpg" class="profile-photo" alt="yh chen" /></p>
+<h1>yh chen</h1>
+<p><strong>Cloud Architect / Solution Architect / SRE / DevOps</strong></p>
+<p>📱 0917-577-377 · 📍 New Taipei City, Taiwan<br />
+💼 <a href="https://www.linkedin.com/in/yh-c-1a08b1203/">LinkedIn</a></p>
+<hr />
+<h2>Profile</h2>
+<p>7-year cross-cloud SRE / DevOps engineer with hands-on production experience<br />
+across <strong>AWS, GCP, and on-premise</strong> environments. Background spans crypto<br />
+exchange (high regulatory bar), martech SaaS, hardware / IoT, and education<br />
+tech — covering <strong>SOC 2 / ISO 27001 compliance</strong>, <strong>org-scale cloud migration</strong>,<br />
+<strong>security incident response</strong>, <strong>cost optimization</strong>, and <strong>AI-powered SRE<br />
+tooling</strong>. Currently driving SOC 2 readiness, pre-production environment<br />
+design, and an LLM-based SRE agent at ViewSonic.</p>
+<hr />
+<h2>Highlights</h2>
+<ul>
+<li><strong>Multi-cloud</strong> — AWS (~5 yrs) + GCP (2 yrs); 11+ AWS accounts, multi-region production</li>
+<li><strong>Compliance</strong> — SOC 2 audit readiness · ISO 27001 monitoring</li>
+<li><strong>Migration scale</strong> — GCP Org migration (Shared VPC, PSC, DMS) · GitHub org migration (69 repos)</li>
+<li><strong>Security</strong> — Drove breach response &amp; full EKS rebuild · Secret Manager + ESO + key rotation · WAF / GuardDuty / SCC</li>
+<li><strong>Cost</strong> — AWS Savings Plans + RI (RDS / Redis / OpenSearch + Compute SP) · GCP CUD · 100% Spot GKE · KubeCost</li>
+<li><strong>AI / automation</strong> — Built OpenClaw (LLM-based SRE agent) · 30+ Claude Code skills + hook-driven automation adopted by infra team</li>
+</ul>
+<hr />
+<h2>AI Workflow &amp; Tooling</h2>
+<p>Daily-driver LLM integration into DevOps work — built around custom skills, hooks, and reusable knowledge:</p>
+<ul>
+<li><strong>Stack</strong> — Claude Code (Opus 4.7, 1M context) as primary terminal-native AI for ops, IaC review, and incident triage; Cursor / GitHub Copilot for IDE pair-programming.</li>
+<li><strong>Skill design</strong> — Author reusable skills following <strong>progressive disclosure</strong> (metadata → SKILL.md → references) so deep procedural knowledge loads on-demand without eating context budget; trigger keywords tuned for high recall, low false-positive.</li>
+<li><strong>Hook-driven automation</strong> — Built event hooks (<code>SessionStart</code> / <code>PostToolUse</code> / <code>Stop</code>) for dirty-repo warnings, auto-commit + auto-PR with merge gating, and auto-Jira-ticket on PR open — removed manual hand-offs from daily ops.</li>
+<li><strong>Multi-agent orchestration</strong> — Use team-mode (multi-role review), parallel-research (multi-angle investigation), and parallel-dev (git-worktree isolated feature work) to scale beyond single-agent context limits.</li>
+<li><strong>Prompt engineering for ops</strong> — System prompts encode incident triage SOPs + action-oriented guardrails (no destructive ops without explicit consent); knowledge persistence routed by <strong>7-criteria decision tree</strong> (memory vs CLAUDE.md rule vs skill file vs project doc).</li>
+<li><strong>Knowledge as code</strong> — Pack internal repos + AWS / Terraform / K8s reference docs into searchable XML knowledge bases; LLM looks them up during incident response and IaC review.</li>
+</ul>
+<hr />
+<h2>Experience</h2>
+<h3>DevOps Engineer · ViewSonic Corporation</h3>
+<p><em>New Taipei · 2025 – Present · DEV Department</em></p>
+<h4>🛡️ SOC 2 Audit Readiness</h4>
+<ul>
+<li>Drove SOC 2 documentation preparation (PBC mapping) across RD / SRE / QA,<br />
+  coordinating evidence collection from 3 functions.</li>
+<li>Implemented strict IAM policies, MFA enforcement, and automated account<br />
+  review workflows.</li>
+<li>Enforced Dev / Test / Prod environment isolation and secure SDLC practices<br />
+  with mandatory code reviews.</li>
+<li>Managed cloud asset inventory and automated data encryption via AWS KMS /<br />
+  Azure Key Vault.</li>
+<li>Authored Business Continuity (BCP) and Disaster Recovery (DR) plans<br />
+  meeting RTO / RPO targets.</li>
+<li>Configured centralized audit logging, vulnerability scanning, and<br />
+  automated alerting systems.</li>
+</ul>
+<h4>🚀 Pre-Production (RC) Environment</h4>
+<ul>
+<li>Stood up release-candidate environment <strong>inside the production AWS account</strong>,<br />
+  sharing EKS cluster / VPC / ACM while isolating data and compute — cuts<br />
+  infra spend versus full prd-duplicate setup.</li>
+<li>Separated RDS / Redis / S3 with <code>-rc</code> suffix, including data migration,<br />
+  firewall rules, and dedicated DB credentials.</li>
+<li>Created dedicated CloudFront distributions for <code>*rc.classswift.com</code> with<br />
+  Lambda@Edge, reusing the same WAF and Istio NLB.</li>
+<li>Split EKS node pools and namespaces via ArgoCD <code>value.rc.yaml</code> with RC<br />
+  node selectors.</li>
+<li>Isolated Parameter Store keys under <code>/rc/</code> path for both infra and app config.</li>
+<li>Extended Grafana dashboards and Kibana indices to cover RC alongside prd.</li>
+</ul>
+<h4>🦞 OpenClaw — AI SRE Agent</h4>
+<ul>
+<li>Built LLM-based SRE assistant that runs AWS CLI / kubectl across<br />
+  dev / stg / prd accounts; designed <strong>3-layer Terraform state architecture</strong><br />
+  with S3 backend and cross-account assume-role.</li>
+<li>Deployed on a single EC2 running k3s, connected via SSM through VPC<br />
+  Endpoints (no public IP, no inbound exposure).</li>
+<li>Slack integration via API Gateway + Lambda with DynamoDB-backed<br />
+  conversation memory.</li>
+<li>Designed modular <strong>skill system (8 skills)</strong> loaded on demand via K8s<br />
+  ConfigMap.</li>
+<li>Packed internal repos into searchable XML references so the LLM can look<br />
+  up infra configs during incidents.</li>
+<li>Wrote custom system prompts with incident triage SOP and guardrails to<br />
+  keep the bot action-oriented.</li>
+</ul>
+<h4>🔀 GitHub Organization Migration &amp; Governance</h4>
+<ul>
+<li>Drove migration of <strong>69 repositories</strong> from VSX-ViewSonic to Viewsonic-EDU<br />
+  (Apr 2026), standardizing branch protection, ruleset, and<br />
+<code>delete_branch_on_merge</code> baseline via gh API automation. Zero downtime,<br />
+  zero broken CI pipelines.</li>
+<li>Established org-wide governance baseline: ruleset templates, bypass<br />
+  approval rules, PR auto-delete-branch — applied uniformly across all<br />
+  migrated repos.</li>
+</ul>
+<h4>🤖 Multi-Agent Automation Platform <em>(internal DevTool)</em></h4>
+<ul>
+<li>Built Claude Code-based automation framework: <strong>30+ custom skills</strong><br />
+  covering AWS infrastructure, Kubernetes, GitHub, CI/CD, and security<br />
+  workflows; hook system for event-driven actions (pre-commit / post-edit<br />
+  / on-PR); 3 parallel execution modes (team-mode / parallel-research /<br />
+  parallel-dev).</li>
+<li>Packed internal AWS / Terraform / K8s reference docs into searchable XML<br />
+  knowledge bases for LLM lookup during incident response and IaC review.</li>
+<li>Hook-driven event automation: PR open / merge triggers, post-edit<br />
+  linting, pre-commit validation pipelines — eliminated manual hand-offs<br />
+  in daily ops.</li>
+<li>Adopted by infra team as daily-driver tooling.</li>
+</ul>
+<h4>🌐 Cross-Account Networking &amp; Alerting</h4>
+<ul>
+<li>Designed VPC peering (vsx-dev ↔ sss-ai-dev) including TGW attachment<br />
+  cleanup, RAM share, and route table propagation — unblocked AI team's<br />
+  cross-account service access in 1 sprint.</li>
+<li>Built reusable Terraform module (<code>aws-alert</code> repo) for RDS / ElastiCache<br />
+  / EKS health → SNS → on-call rotation; consolidated 20+ ad-hoc CloudWatch<br />
+  alarms into one declarative source of truth.</li>
+<li>Operate AWS Client VPN (dev / prd endpoints) with SNAT routing for<br />
+  engineer access to internal resources (EKS, RDS, ElastiCache).</li>
+</ul>
+<h4>💰 AWS Cost &amp; IAM Identity Center Governance</h4>
+<ul>
+<li>Integrated AWS Cost Explorer at <strong>Org payer level</strong> (admin account,<br />
+  us-east-1) for cross-account <strong>NetAmortizedCost</strong> reporting with RI /<br />
+  Savings Plan amortization across 11 accounts; replaced per-account<br />
+  UnblendedCost guesswork that understated true monthly cost by <strong>20–35%</strong>.</li>
+<li>Centralized IAM Identity Center governance (us-east-1): standardized<br />
+  shared permission sets (<code>vsx-fullstack-v1</code> / <code>vsx-ro-v1</code> /<br />
+<code>vsx-admin-v1</code> / <code>vsx-vendor-v1</code>) across all subaccount families<br />
+  instead of per-app proliferation — prevents policy drift and simplifies<br />
+  audit.</li>
+<li>Automated user / group / permission-set provisioning via aws-cli +<br />
+  Identity Store + SSO-Admin APIs (modular bash workflow).</li>
+</ul>
+<h4>🔒 Security Scan Automation <em>(SCA / SAST)</em></h4>
+<ul>
+<li>Integrated central reusable GitHub Actions workflow<br />
+  (<code>edu-security-lab-va</code>) with <strong>DefectDojo + Dependency-Track</strong> for SBOM<br />
+  generation and vulnerability scanning across all migrated repos.</li>
+<li>OIDC-based AWS role assumption (<code>DevSecOps-Github-OIDC-bot</code>) for secure<br />
+  cross-account scan access; standardized <code>BU/product/repo-name</code> taxonomy<br />
+  for portfolio classification.</li>
+<li>Authored integration playbook covering common gotchas (workflow<br />
+  permissions, OIDC token scope, DT project ACL setup) — reduced<br />
+  first-time integration failures across BU teams.</li>
+</ul>
+<hr />
+<h3>SRE · BitoPro Technology</h3>
+<p><em>Taipei · 2023 – 2025 · O&amp;M Department · (Taiwan's largest crypto exchange)</em></p>
+<h4>🔥 Security Breach Response</h4>
+<ul>
+<li>Rebuilt EKS cluster from scratch and migrated all applications post-incident.</li>
+<li>Rotated all secrets: Secret Manager entries, EC2 user passwords, K8s Secrets.</li>
+<li>Re-deployed K8s resources through Jenkins pipeline; reviewed every Network<br />
+  Policy / Security Group inbound &amp; outbound rule.</li>
+<li>Isolated payment systems onto stand-alone EC2 instances.</li>
+<li>Hardened with AWS Config / Security Hub / GuardDuty; restricted SRE IAM<br />
+  permissions to least-privilege; reviewed all WAF rules.</li>
+</ul>
+<h4>☁️ AWS Infrastructure as Code</h4>
+<ul>
+<li>Owned production AWS CDK codebase (TypeScript).</li>
+</ul>
+<h4>💰 Cost Optimization</h4>
+<ul>
+<li>AWS Savings Plans + RIs across RDS / Redis / OpenSearch + Compute SP;<br />
+  daily budget alerts; KubeCost rollout with per-deployment CPU/mem<br />
+  requests / limits tuning.</li>
+</ul>
+<h4>📈 Observability &amp; Monitoring</h4>
+<ul>
+<li>AWS service monitoring · PMM DB query insights · Grafana OnCall<br />
+  notifications · OpenTelemetry tracing · Thanos central monitoring ·<br />
+  ELK / OpenSearch logging architecture.</li>
+</ul>
+<h4>🛡️ Security Hardening</h4>
+<ul>
+<li>Architected Secret Manager + External Secrets Operator pipeline with<br />
+  automatic key rotation; routed VPC Flow Logs + WAF logs to S3 for Athena<br />
+  reporting.</li>
+<li>Deployed cert-manager for TLS lifecycle; tightened Network Policies,<br />
+  Security Policies, NACLs; ran Chaos Monkey drills; tuned WAF rules.</li>
+</ul>
+<h4>🔧 CI/CD Pipelines</h4>
+<ul>
+<li>Built Jenkins pipeline with dynamic pod templates (JNLP + Kaniko<br />
+  containers, S3 cache, EFS-mounted Go build cache, ECR-refresher helper<br />
+  for credential rotation).</li>
+<li>Mirrored architecture on GitLab Runner.</li>
+</ul>
+<h4>📊 Reliability &amp; Stability</h4>
+<ul>
+<li>Pod HPA / VPA · Node ASG · JMeter stress testing · daily Velero backups<br />
+  (RDS / Redis / EBS / PVC) · operated multi-broker, partitioned, replicated<br />
+  Kafka clusters.</li>
+</ul>
+<h4>🔄 Operational Maintenance</h4>
+<ul>
+<li>Helm chart upgrades · SSM Agent updates · EKS version upgrade workflow ·<br />
+  routine release deploys.</li>
+</ul>
+<hr />
+<h3>SRE · awoo Intelligence</h3>
+<p><em>Taipei · 2021 – 2023 · Cloud Infra Department</em></p>
+<h4>🌏 GCP Organization Migration</h4>
+<ul>
+<li>Designed and executed GCP organization migration end-to-end: Shared VPC,<br />
+  VPC peering, GKE / Cloud SQL / Redis IP range planning, Private Service<br />
+  Connect (PSC), Database Migration Service (DMS).</li>
+<li>Built migration playbook: Terraform IaC, ArgoCD CI/CD, MongoDB dump /<br />
+  restore, continuous Cloud SQL migration, GCE migration, public IP<br />
+  migration with <strong>minimized downtime traffic switch</strong>.</li>
+</ul>
+<h4>🏗️ On-Premise Data Center Operations</h4>
+<ul>
+<li>NAS backup solution · Fortinet site-to-site VPN · VLAN environment<br />
+  isolation (Dev / Staging / Production).</li>
+</ul>
+<h4>💾 Disaster Recovery</h4>
+<ul>
+<li>Planned Tokyo subnet + GKE Pod / Service IP ranges · backup / restore<br />
+  procedures · DR rehearsals.</li>
+</ul>
+<h4>🔧 GitOps CI/CD on GKE</h4>
+<ul>
+<li>Terraform Infra Pipeline — GitLab + GKE runner + Helm + Terraform.</li>
+<li>ArgoCD Application Pipeline — GitLab + GKE ArgoCD + Kustomize + Helm.</li>
+</ul>
+<h4>💰 GCP Cost Optimization</h4>
+<ul>
+<li>KubeCost-driven deployment cost tuning; <strong>100% Spot GKE</strong>; Redis &amp; MongoDB<br />
+  self-hosted on GKE; Nginx Ingress Controller replacing internal LB.</li>
+<li>Committed Use Discounts (CUD) for VM / Cloud SQL / Redis; BQ + GCS data<br />
+  lifecycle policies; daily BQ query quota limits; Cloud Logging exclusion<br />
+  rules; scheduled GCE stop / restart; auto-cleanup of unattached disks /<br />
+  external IPs.</li>
+</ul>
+<h4>📈 Monitoring</h4>
+<ul>
+<li>Thanos central monitoring · Cloud Monitoring central alerting · service<br />
+  uptime checks.</li>
+</ul>
+<h4>🛡️ Security</h4>
+<ul>
+<li>Security Command Center · VM patch / NTP / OS update automation · VM<br />
+  vulnerability scanner · Cloud SQL SSL enforcement · company-wide MFA ·<br />
+  Cloud Armor WAF for L7 DDoS mitigation · firewall hardening (removed<br />
+<code>0.0.0.0/0</code> source on SSH / RDP ports).</li>
+</ul>
+<hr />
+<h3>Cloud Engineer · Askey Computer Corp</h3>
+<p><em>New Taipei · 2019 – 2021 · Cloud Dev Department · (ASUS subsidiary, hardware / IoT)</em></p>
+<p>Built cloud APIs and IoT services for smart home, smart bus, FOTA, and<br />
+firmware management products.</p>
+<ul>
+<li><strong>Smart Shuttle Bus IoT</strong> — Node.js, Raspberry Pi GPIO, AWS IoT Core,<br />
+  MQTT, WebSocket; connected smart stations, shuttles, and cloud.</li>
+<li><strong>Smart Home Capability API</strong> — Node.js, Cloud Functions, IoT Core, PubSub,<br />
+  DataStore, MQTT; appliance capability sync between devices and cloud.</li>
+<li><strong>WiFi 6 Router Management Report API</strong> — Node.js, BigQuery, Cloud Functions,<br />
+  API Gateway; account registration + device onboarding analytics.</li>
+<li><strong>AI Search Service API</strong> — Python, S3, Lambda, Rekognition, SNS, SQS,<br />
+  Elasticsearch, API Gateway; video analysis, search, and download for<br />
+  surveillance product.</li>
+<li><strong>FOTA / iDVR Billing Report API</strong> — Node.js, CloudWatch, S3, Athena,<br />
+  Lambda, DynamoDB, API Gateway; firmware-over-the-air + fleet management<br />
+  billing.</li>
+<li><strong>Operations tooling</strong> — automated email delivery (SES + S3 templates);<br />
+  CloudWatch alert configuration tool; cross-cloud monitoring → Google Chat<br />
+  webhook push (Lambda + SNS + Ansible).</li>
+<li><strong>ISO 27001 Service Monitor</strong> — CloudWatch dashboard for compliance audit.</li>
+</ul>
+<hr />
+<h2>Skills</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS</strong></td>
+<td>EKS · ECS · RDS · ElastiCache · VPC · IAM Identity Center · Cost Explorer · Organizations · ECR · SSM · Lambda · Route53 · ACM · CloudWatch · EventBridge · SNS · Secrets Manager · WAF · GuardDuty · Security Hub · Config · Athena · Client VPN · KMS · Rekognition</td>
+</tr>
+<tr>
+<td><strong>GCP</strong></td>
+<td>GKE · Cloud SQL · Cloud Functions · IoT Core · BigQuery · Cloud Armor · Security Command Center · Cloud Monitoring · PubSub · PSC · DMS</td>
+</tr>
+<tr>
+<td><strong>IaC</strong></td>
+<td>Terraform (3-layer state, S3 + DynamoDB lock) · AWS CDK (TypeScript / Python) · Helm · Kustomize</td>
+</tr>
+<tr>
+<td><strong>Kubernetes</strong></td>
+<td>EKS · GKE · k3s · ArgoCD · KEDA · HPA / VPA · Istio · External Secrets Operator · IRSA · Velero · cert-manager</td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>GitLab + GitLab Runner · Jenkins (JNLP + Kaniko + S3 / EFS cache) · GitHub Actions (reusable workflows, OIDC)</td>
+</tr>
+<tr>
+<td><strong>Observability</strong></td>
+<td>Grafana · OpenTelemetry · Thanos · ELK / OpenSearch · PMM · CloudWatch · Cloud Monitoring · Sentry</td>
+</tr>
+<tr>
+<td><strong>Security &amp; Compliance</strong></td>
+<td>SOC 2 · ISO 27001 · WAF · GuardDuty · Security Hub · Cloud Armor · cert-manager · Network Policy · Chaos Monkey · DefectDojo + Dependency-Track</td>
+</tr>
+<tr>
+<td><strong>AI / DevTools</strong></td>
+<td>Claude Code (Opus, 1M ctx) · Custom skill development (progressive disclosure, trigger design) · Hook-driven automation (SessionStart / PostToolUse / Stop) · Multi-agent orchestration (team-mode / parallel-research / parallel-dev) · Prompt engineering for ops · LLM-based incident response (OpenClaw) · Cursor · GitHub Copilot</td>
+</tr>
+<tr>
+<td><strong>Languages</strong></td>
+<td>Python · TypeScript · Node.js · Bash · HCL · YAML</td>
+</tr>
+<tr>
+<td><strong>Other</strong></td>
+<td>Fortinet VPN · IoT (MQTT, GPIO, Raspberry Pi) · AWS Client VPN</td>
+</tr>
+</tbody>
+</table>
+<footer>
+  Last updated: 2026-07-14
+</footer>
+</main>
+</body>
+</html>
